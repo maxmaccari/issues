@@ -38,6 +38,7 @@ defmodule Issues.CLI do
     Issues.GithubIssues.fetch(user, project)
     |> decode_response
     |> sort_into_ascending_order
+    |> Enum.take(count)
   end
 
   def decode_response({:ok, body}), do: body
