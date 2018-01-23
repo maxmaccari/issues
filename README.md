@@ -1,21 +1,13 @@
 # Issues
 
-**TODO: Add description**
+Project developed following the book [Programming Elixir 1.3](https://www.amazon.com.br/Programming-Elixir-1-3-Dave-Thomas/dp/168050200X).
+
+This software lists the issues from a repository in github.
 
 ## Installation
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `issues` to your list of dependencies in `mix.exs`:
+You must have erlang runtime in your system to execute this project. You may
+pick a version from [erlang download page](https://www.erlang.org/downloads).
 
-```elixir
-def deps do
-  [
-    {:issues, "~> 0.1.0"}
-  ]
-end
-```
-
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/issues](https://hexdocs.pm/issues).
-
+You can get the usage instructions typing `./dist/issues --help`  in your
+console.
