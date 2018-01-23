@@ -39,6 +39,7 @@ defmodule Issues.CLI do
     |> decode_response
     |> sort_into_ascending_order
     |> Enum.take(count)
+    |> print_table_for_columns(["number", "created_at", "title"])
   end
 
   def decode_response({:ok, body}), do: body
@@ -52,5 +53,9 @@ defmodule Issues.CLI do
   def sort_into_ascending_order(list_of_issues) do
     Enum.sort list_of_issues,
       fn i1, i2 -> Map.get(i1, "created_at") <= Map.get(i2, "created_at") end
+  end
+
+  def print_table_for_columns(rows, headers) do
+    Issues.TableFormatter.print_table_for_columns(rows, headers)
   end
 end
